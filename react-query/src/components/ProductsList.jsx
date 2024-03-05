@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { retrieveProducts } from "../utils/index";
 
-export default function ProductsList({onShowDetails}) {
+export default function ProductsList({onShowDetails, onEditProduct}) {
   const {
     data: products,
     error,
@@ -32,7 +32,9 @@ export default function ProductsList({onShowDetails}) {
               <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2">
                 Delete
               </button>
-              <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2">
+              <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
+              onClick={()=>onEditProduct(product)}
+              >
                Edit
               </button>
             </div>

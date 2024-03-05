@@ -14,4 +14,6 @@ const addProduct =(newProduct)=>{
     return response;
 }
 
+// const editProduct=({})
+
 export {retrieveProducts, getProductDetail, addProduct};
