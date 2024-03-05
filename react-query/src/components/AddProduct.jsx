@@ -37,6 +37,7 @@ export default function AddProduct() {
         <input
           className="border border-black rounded ps-2 w-full mb-2"
           type="text"
+          value={product.title}
           onChange={handleChange}
           name="title"
           placeholder="add title"
@@ -46,6 +47,7 @@ export default function AddProduct() {
         <input
           className="border border-black rounded ps-2 w-full mb-2"
           type="text"
+          value={product.price}
           onChange={handleChange}
           name="price"
           placeholder="add price"
@@ -55,6 +57,7 @@ export default function AddProduct() {
         <input
           className="border border-black rounded ps-2 w-full mb-2"
           type="text"
+          value={product.rating}
           onChange={handleChange}
           name="rating"
           placeholder="add rating"
@@ -64,6 +67,7 @@ export default function AddProduct() {
         <input
           className="border border-black rounded ps-2 w-full mb-2"
           type="text"
+          value={product.description}
           onChange={handleChange}
           name="description"
           placeholder="add description"
@@ -73,6 +77,7 @@ export default function AddProduct() {
         <input
           className="border border-black rounded ps-2 w-full mb-2"
           type="text"
+          value={product.thumbnail}
           onChange={handleChange}
           name="thumbnail"
           placeholder="add thumbnail url"
