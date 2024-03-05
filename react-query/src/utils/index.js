@@ -1,6 +1,9 @@
 import axios from 'axios';
 const retrieveProducts = async({queryKey}) =>{
-    const response = await axios.get(`http://localhost:3000/${queryKey[0]}`);
+    // console.log(queryKey);
+    const response = await axios.get(`http://localhost:3000/${queryKey[0]}?_page=${queryKey[1].page}&_per_page=5`);
+    
+
     return response.data;
 }
 
