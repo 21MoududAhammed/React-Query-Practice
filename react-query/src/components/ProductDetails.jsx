@@ -11,7 +11,7 @@ export default function ProductDetails({id}){
     if(error) return <div>{error.message}</div>
     if(isLoading) return <div>Fetching....</div>
     return (
-       <div className="w-2/5">
+       <div >
         <h1 className="text-5xl font-bold text-center my-2 ">Product Details</h1>
          <div className="border border-gray-900 p-2  mt-5">
             <img className="rounded-full max-w-96" src={product.thumbnail} alt="" />

@@ -9,4 +9,9 @@ const getProductDetail = async({queryKey}) =>{
     return response.data;
 }
 
-export {retrieveProducts, getProductDetail};
+const addProduct =(newProduct)=>{
+    const response =  axios.post(`http://localhost:3000/products`, newProduct)
+    return response;
+}
+
+export {retrieveProducts, getProductDetail, addProduct};
