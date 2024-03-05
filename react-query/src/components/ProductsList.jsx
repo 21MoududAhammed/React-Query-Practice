@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { retrieveProducts } from "../utils/index";
 
-export default function ProductsList() {
+export default function ProductsList({onShowDetails}) {
   const {
     data: products,
     error,
@@ -24,7 +24,9 @@ export default function ProductsList() {
             <img src={product.thumbnail} alt="" />
             <h1 className="text-4xl text-center">{product.title}</h1>
             <div className="text-center">
-              <button className="w-full  py-3 bg-gray-600 text-white font-bold rounded-xl my-2">
+              <button className="w-full  py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
+              onClick={()=> onShowDetails(product.id)}
+              >
                 Show Details
               </button>
               <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2">
