@@ -1,5 +1,5 @@
-export default function App(){
-    return (
-        <h1>Hello</h1>
-    );
+import ProductsList from "./components/ProductsList";
+
+export default function App() {
+  return <ProductsList />;
 }
