@@ -1,7 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { retrieveProducts } from "../utils/index";
+import axios from "axios";
 
-export default function ProductsList({onShowDetails, onEditProduct}) {
+export default function ProductsList({ onShowDetails, onEditProduct }) {
+  const queryClient = useQueryClient();
+//   to load products 
   const {
     data: products,
     error,
@@ -10,6 +13,18 @@ export default function ProductsList({onShowDetails, onEditProduct}) {
     queryKey: ["products"],
     queryFn: retrieveProducts,
   });
+  // to delete a product
+  const { mutate } = useMutation({
+    mutationFn: (id) => axios.delete(`http://localhost:3000/products/${id}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries(["products"]);
+    },
+  });
+
+  function handleDeleteProduct(id) {
+    mutate(id);
+  }
+
   if (isLoading) return <div>Fetching.....</div>;
   if (error) return <div>{error.message}</div>;
   return (
@@ -24,18 +39,23 @@ export default function ProductsList({onShowDetails, onEditProduct}) {
             <img src={product.thumbnail} alt="" />
             <h1 className="text-4xl text-center">{product.title}</h1>
             <div className="text-center">
-              <button className="w-full  py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
-              onClick={()=> onShowDetails(product.id)}
+              <button
+                className="w-full  py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
+                onClick={() => onShowDetails(product.id)}
               >
                 Show Details
               </button>
-              <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2">
+              <button
+                className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
+                onClick={() => handleDeleteProduct(product.id)}
+              >
                 Delete
               </button>
-              <button className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
-              onClick={()=>onEditProduct(product)}
+              <button
+                className="w-full py-3 bg-gray-600 text-white font-bold rounded-xl my-2"
+                onClick={() => onEditProduct(product)}
               >
-               Edit
+                Edit
               </button>
             </div>
           </li>

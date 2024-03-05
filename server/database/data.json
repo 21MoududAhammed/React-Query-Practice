@@ -223,46 +223,6 @@
       "price": 20,
       "rating": 4.82,
       "thumbnail": "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"
-    },
-    {
-      "id": "29",
-      "title": "Handcraft Chinese style",
-      "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
-      "price": 60,
-      "rating": 4.44,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/29/thumbnail.webp"
-    },
-    {
-      "id": "30",
-      "title": "Key Holder",
-      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-      "price": 30,
-      "rating": 4.92,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
-    },
-    {
-      "id": "ce44acfc-9a6e-4b54-b043-bda45852d7e2",
-      "title": "cozy bed",
-      "price": "5000",
-      "rating": "4",
-      "description": "very good",
-      "thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dcartoon%2Bbed&psig=AOvVaw2xpWSxMP1Yl74GAGLBh0gu&ust=1709694865429000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJio0-qT3IQDFQAAAAAdAAAAABAE"
-    },
-    {
-      "id": "11691c4d-94c7-4902-9be5-d008991290c8",
-      "title": "Water pot",
-      "price": "100",
-      "rating": "5",
-      "description": "nothing",
-      "thumbnail": "https://github.com/account"
-    },
-    {
-      "id": "f46715cb-dda5-44bc-9c14-1d534f1c2b08",
-      "title": "Nokia",
-      "price": "5000",
-      "rating": "5",
-      "description": "cool",
-      "thumbnail": "https:"
     }
   ]
 }
